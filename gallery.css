@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Athiti', sans-serif;
-    background: url('/image/2bg.png') no-repeat center center/cover;
+    background: url('https://cdn.gilcdn.com/ContentMediaGenericFiles/614dfa02db78adad1ee025f9d6a1c069-Full.webp?w=3840&h=3374&Expires=1731682703&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uZ2lsY2RuLmNvbS8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzMxNjgyNzAzfX19XX0_&Signature=rs7rBlynMSatDCALRYe4W063WmSHXmab0mQAtZFkU13zHVhTAy3xkGGk3FQaPYJ~pm2MgnmUzcUe3~SyOSNfrabC52Jd5J8O8Xs0zyS1wRfXc4d-TxfDTr31HBG56pf48Pkcqv9dQrXPXSlNG7zInMVMop8Y5Ulk~XL9d1rh2GfdXsejFS3B8u-clGvszOCZXnyiNhBoQoMVXe0UlWzLukBjaDDh5UIMk1FmT0SX4uijugf0gJD57Gm5D6DuJsAuAYJaZh1BY5v02J2-tENjX3YC39NYHWq7S-2EvSgTfmjVSM6QT50-VKT9fLKcV1HPs13uw9JY~z~XBpR3Z4cCvQ__&Key-Pair-Id=K1FFKFZRWAZSB') no-repeat center center/cover;
     color:#d1deff;
 }
 
@@ -22,7 +22,7 @@ body {
 
 /* Header and Navigation */
 header {
-    background-image: url('/image/1bg.png');
+    background-image: url('https://cdn.gilcdn.com/ContentMediaGenericFiles/9f6d74786115e6490380a6a2993b0480-Full.webp?w=3840&h=3374&Expires=1731682703&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uZ2lsY2RuLmNvbS8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzMxNjgyNzAzfX19XX0_&Signature=rs7rBlynMSatDCALRYe4W063WmSHXmab0mQAtZFkU13zHVhTAy3xkGGk3FQaPYJ~pm2MgnmUzcUe3~SyOSNfrabC52Jd5J8O8Xs0zyS1wRfXc4d-TxfDTr31HBG56pf48Pkcqv9dQrXPXSlNG7zInMVMop8Y5Ulk~XL9d1rh2GfdXsejFS3B8u-clGvszOCZXnyiNhBoQoMVXe0UlWzLukBjaDDh5UIMk1FmT0SX4uijugf0gJD57Gm5D6DuJsAuAYJaZh1BY5v02J2-tENjX3YC39NYHWq7S-2EvSgTfmjVSM6QT50-VKT9fLKcV1HPs13uw9JY~z~XBpR3Z4cCvQ__&Key-Pair-Id=K1FFKFZRWAZSB');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -191,7 +191,7 @@ h2 {
 }
 /* Background Images for Header and Footer */
 header {
-    background-image: url('/image/1bg.png'); /* Replace with your image path */
+    background-image: url('https://cdn.gilcdn.com/ContentMediaGenericFiles/9f6d74786115e6490380a6a2993b0480-Full.webp?w=3840&h=3374&Expires=1731682703&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4uZ2lsY2RuLmNvbS8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzMxNjgyNzAzfX19XX0_&Signature=rs7rBlynMSatDCALRYe4W063WmSHXmab0mQAtZFkU13zHVhTAy3xkGGk3FQaPYJ~pm2MgnmUzcUe3~SyOSNfrabC52Jd5J8O8Xs0zyS1wRfXc4d-TxfDTr31HBG56pf48Pkcqv9dQrXPXSlNG7zInMVMop8Y5Ulk~XL9d1rh2GfdXsejFS3B8u-clGvszOCZXnyiNhBoQoMVXe0UlWzLukBjaDDh5UIMk1FmT0SX4uijugf0gJD57Gm5D6DuJsAuAYJaZh1BY5v02J2-tENjX3YC39NYHWq7S-2EvSgTfmjVSM6QT50-VKT9fLKcV1HPs13uw9JY~z~XBpR3Z4cCvQ__&Key-Pair-Id=K1FFKFZRWAZSB'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
