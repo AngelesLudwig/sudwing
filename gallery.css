@@ -1,0 +1,273 @@
+
+ /* Reset and basic styles */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Athiti', sans-serif;
+    background: url('/image/2bg.png') no-repeat center center/cover;
+    color:#d1deff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-image: url('/image/1bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    display: none;
+}
+.logo img {
+    width: 50px;
+    z-index: 2;
+}
+
+/* Navbar */
+.navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.navbar li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: scaleY(2);
+    opacity: 2;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.navbar li a:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: -1;
+}
+
+.navbar li a:hover {
+    color: #d1deff; /* Text color changes on hover */
+}
+
+.navbar li a:hover:before {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.navbar li a:hover:after {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+/* Mobile Navbar */
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000000;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #d1deff;
+        padding: 10px;
+        width: 150px;
+        border-radius: 8px;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+}
+
+
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.image-grid {
+    column-count: 3; /* Number of columns */
+    column-gap: 15px; /* Spacing between columns */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        column-count: 2; /* Reduce columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        column-count: 1; /* Single column on small screens */
+    }
+
+}
+/* Background Images for Header and Footer */
+header {
+    background-image: url('/image/1bg.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+header, footer {
+    position: relative;
+}
+
+header::before, footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+
+/* Footer Section */
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #d1deff; /* Light blue background */
+    position: relative;
+    color: #000000; /* Darker color for text to ensure readability */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Ensures logo and socials are on opposite ends */
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-logo img {
+    width: 300px; /* Adjust logo size */
+    margin-left: 1in;
+}
+
+.socials {
+    color: #000000;
+    text-align: right;
+    margin-right: 1in;
+}
+
+.socials p {
+    margin: 5px 0;
+    font-size: 2rem;
+}
+
+footer::before {
+    /* Removed the circular shape */
+    display: none;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+.social-icon {
+    font-size: 100px; /* Adjust size if needed */
+    color: #000000;
+}
+
+/* Ensure content is above overlay */
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
