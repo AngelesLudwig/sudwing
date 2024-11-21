@@ -1,25 +1,178 @@
 
- /* Reset and basic styles */
- * {
+/* Reset and basic styles */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling across the page */
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Athiti', sans-serif;
     background: url('image/2bg.png') no-repeat center center/cover;
-    color:#9fb5bd;
+    color: #9fb5bd;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Scrolling Section */
+.scrolling-section {
+    position: relative;
+    height: 130vh; /* Double viewport height */
+    overflow: hidden;
+}
+
+.image-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: #000; /* Fallback color */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    margin-top: 10px;
+    position: absolute;
+    top: 70vh;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.9);
+    color: #ffffff;
+    padding: 66px;
+    z-index: 2;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.about-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .about-content {
+        padding: 50px; /* Reduce padding for smaller screens */
+    }
+
+    .about-content h1 {
+        font-size: 2.5rem; /* Slightly smaller font size */
+    }
+
+    .about-content p {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 40px; /* Further reduce padding for medium screens */
+        top: 65vh; /* Adjust vertical positioning */
+    }
+
+    .about-content h1 {
+        font-size: 2rem; /* Smaller font size for medium screens */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Smaller text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 30px; /* Compact padding for small screens */
+        top: 60vh; /* Adjust vertical positioning for better fit */
+        border-radius: 5px; /* Reduce border-radius for smaller screens */
+    }
+
+    .about-content h1 {
+        font-size: 1.5rem; /* Smaller font size for small screens */
+    }
+
+    .about-content p {
+        font-size: 0.9rem; /* Compact text size */
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+}
+
+
+.scrolling-section.scrolled .image-top {
+    opacity: 0;
+}
+
+.scrolling-section.scrolled .about-content {
+    transform: translateY(0);
+}
+
+/* Favorite Softwares Section */
+.favorite-softwares {
+    margin-block-end: 14rem;
+    text-align: center;
+    padding: 33px; /* Maintain consistent padding */
+    background-color: rgba(15, 15, 15, 0.9);
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.favorite-softwares h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px; /* Reduced spacing under heading */
+}
+
+.software-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Reduced spacing between items */
+}
+
+.software {
+    position: relative;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.software img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.software p {
+    margin-top: 8px; /* Reduced space under images */
+    font-size: 1rem;
+    color: #fff;
+}
+
+.about-content, .favorite-softwares {
+    margin-top: -140px; /* Adjust this value to control the space between the sections */
 }
 
 /* Header and Navigation */
@@ -76,6 +229,7 @@ header::before {
     content: '';
     position: absolute;
     top: 0;
+
     left: 0;
     width: 100%;
     height: 100%;
@@ -114,6 +268,7 @@ header::before {
     transform: scaleY(1);
     opacity: 1;
 }
+
 
 /* Mobile Navbar */
 .menu-icon {
@@ -159,81 +314,6 @@ header::before {
     .navbar.show .menu-icon {
         transform: rotate(90deg); /* Rotate the hamburger icon when the menu is open */
     }
-}
-
-/* Gallery Section */
-.gallery-section {
-    text-align: center;
-    margin: 40px auto;
-}
-
-h1 {
-    font-size: 5.5rem;
-    margin-bottom: 20px;
-}
-
-.image-grid {
-    column-count: 3;
-    column-gap: 15px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.image-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px #9fb5bd;
-}
-
-/* Adjust grid for smaller screens */
-@media (max-width: 768px) {
-    .image-grid {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 480px) {
-    .image-grid {
-        column-count: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .image-grid {
-        column-count: 1; /* Single column on small screens */
-    }
-
-}
-/* Background Images for Header and Footer */
-header {
-    background-image: url('image/1bg.png'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-header, footer {
-    position: relative;
-}
-
-header::before, footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0c0105; 
-    z-index: 1;
 }
 
 
@@ -348,3 +428,5 @@ footer::before {
         font-size: 1.2rem; /* Reduce icon size */
     }
 }
+
+

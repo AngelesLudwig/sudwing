@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudwing Gallery</title>
+    <title>Sudwing Gaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="gaming.css">
     <style>
         /* Smooth transition for header visibility */
         header {
@@ -18,8 +18,6 @@
             width: 100%;
             z-index: 999;
             transition: transform 0.3s ease-in-out;
-
-            
         }
 
         footer {
@@ -56,36 +54,68 @@
             </ul>
         </header>
 
-        <section class="gallery-section">
-            <h1>Gallery</h1>
-            
-            <div class="gallery">
-                <div class="image-grid">
-                    <img src="image/gal/01.png" alt="Sample 1">
-                    <img src="image/gal/02.png" alt="Sample 2">
-                    <img src="image/gal/03.png" alt="Sample 3">
-                    <img src="image/gal/04.png" alt="Sample 4">
-                    <img src="image/gal/05.png" alt="Sample 5">
-                    <img src="image/gal/06.png" alt="Sample 6">
-                    <img src="image/gal/07.png" alt="Sample 7">
-                    <img src="image/gal/08.png" alt="Sample 8">
-                    <img src="image/gal/09.png" alt="Sample 9">
-                    <img src="image/gal/10.png" alt="Sample 10">
-                    <img src="image/gal/11.png" alt="Sample 11">
-                    <img src="image/gal/12.png" alt="Sample 12">
-                    <img src="image/gal/13.png" alt="Sample 13">
-                    <img src="image/gal/14.png" alt="Sample 14">
-                    <img src="image/gal/15.png" alt="Sample 15">
-                    <img src="image/gal/16.png" alt="Sample 16">
-                    <img src="image/gal/17.png" alt="Sample 17">
-                    <img src="image/gal/18.png" alt="Sample 18">
-                    <img src="image/gal/19.png" alt="Sample 19">
-                    <img src="image/gal/20.jpg" alt="Sample 20">
-                    <img src="image/gal/21.jpg" alt="Sample 21">
-                    <img src="image/gal/22.png" alt="Sample 22">
-                </div>
+        <section class="gaming-section">
+            <h1>Gaming</h1>
+    
+    <div class="play-time">
+        <h2>Play Time</h2>
+        <div class="game-thumbnails">
+            <div class="thumbnail">
+                <img src="image/game/Dota.png" alt="Dota 2">
+                <div class="playtime-overlay">Total Playtime: 797 hrs</div>
             </div>
-        </section>
+            <div class="thumbnail">
+                <img src="image/game/cs2.png" alt="Counter-Strike 2">
+                <div class="playtime-overlay">Total Playtime: 1,291 hrs</div>
+            </div>
+            <div class="thumbnail">
+                <img src="image/game/tekk.png" alt="Tekken">
+                <div class="playtime-overlay">Total Playtime: 222.8 hrs</div>
+            </div>
+            <div class="thumbnail">
+                <img src="image/game/l4d2.png" alt="Left 4 Dead 2">
+                <div class="playtime-overlay">Total Playtime: 139.3 hrs</div>
+            </div>
+        </div>
+
+    <!-- Games & Settings Section -->
+    <div class="games-settings">
+        <h2>Game Settings</h2>
+        <div class="tekken-settings">
+            <h3>Tekken</h3>
+            <img src="image/game/tekset.png" alt="Tekken Settings">
+        </div>
+        <div class="config-file">
+            <h3>CS2 Config File</h3>
+            <a href="/src/Sudwing CS2 Config.zip" download="CS2-Config.zip" class="download-button">Download</a>
+            <h3>Dota 2 Config File</h3>
+            <a href="/src/Sudwing Dota 2 config.zip" download="Dota2-Config.zip" class="download-button">Download</a>
+        </div>
+
+    <!-- Game Clip Section -->
+    <div class="game-clip">
+        <h2>Most Recent Game Clip</h2>
+        <div class="clip-placeholder">
+            <video controls width="100%" max-width="600px" style="border-radius: 10px;">
+                <source src="image/game/cs2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                
+            </video>
+        </div>
+    </div>
+
+    <!-- PC Specs Section -->
+    <div class="pc-specs">
+        <h2>PC Specs</h2>
+        <ul>
+            <li><strong>CPU:</strong> Ryzen 5 5600g</li>
+            <li><strong>GPU:</strong> Radeon Vega 7</li>
+            <li><strong>Motherboard:</strong> Gigabyte B550M DS3H</li>
+            <li><strong>Power Supply:</strong> Corsair CV550 550W 80+ Bronze</li>
+            <li><strong>SSD:</strong> Kingston 1TB NV2 PCIE NVME M.2</li>
+        </ul>
+    </div>
+</section>
         
         <footer>
             <div class="footer-content">
@@ -145,12 +175,6 @@
         } else {
             footer.style.transform = "translateY(100%)";
         }
-    });
-});
-
-document.querySelector('.scroll-button').addEventListener('click', function () {
-    document.querySelector('#target-section').scrollIntoView({
-        behavior: 'smooth'
     });
 });
 

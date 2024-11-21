@@ -348,3 +348,62 @@ footer::before {
         font-size: 1.2rem; /* Reduce icon size */
     }
 }
+
+
+/* Reference Section */
+.reference-section {
+    text-align: center;
+    margin: 40px auto;
+    color: #9fb5bd;
+}
+
+.reference-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.reference-section h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Artists Grid */
+.artist-grid, .style-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.artist, .style-grid img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.artist p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.style-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.artist img:hover, .style-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px #9fb5bd;
+}
+

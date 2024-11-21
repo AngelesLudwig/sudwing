@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/image/2bg.png') no-repeat center center/cover;
+    background: url('image/2bg.png') no-repeat center center/cover;
     font-family: var(--font-family);
 }
 
@@ -53,7 +53,7 @@ body {
     width: var(--nav-item-width);
     padding: 20px;
     text-align: center;
-    background-image: url('/image/1bg.png');
+    background-image: url('image/1bg.png');
     background-size: cover;
     font-size: 1rem;
     border-radius: var(--border-radius);
@@ -99,27 +99,27 @@ body {
 }
 
 .nav-item:nth-child(1):hover::before {
-    background-image: url('/image/neswsmmm.png');
+    background-image: url('image/neswsmmm.png');
     opacity: 1;
 }
 
 .nav-item:nth-child(2):hover::before {
-    background-image: url('/image/Aegis.jpg');
+    background-image: url('image/Aegis.jpg');
     opacity: 1;
 }
 
 .nav-item:nth-child(3):hover::before {
-    background-image: url('/image/wig.JPG');
+    background-image: url('image/wig.JPG');
     opacity: 1;
 }
 
 .nav-item:nth-child(4):hover::before {
-    background-image: url('/image/prp.png');
+    background-image: url('image/prp.png');
     opacity: 1;
 }
 
 .nav-item:nth-child(5):hover::before {
-    background-image: url('/image/refthing.jpg');
+    background-image: url('image/refthing.jpg');
     opacity: 1;
 }
 

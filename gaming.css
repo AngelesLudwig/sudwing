@@ -161,8 +161,8 @@ header::before {
     }
 }
 
-/* Gallery Section */
-.gallery-section {
+
+.gaming-section {
     text-align: center;
     margin: 40px auto;
 }
@@ -171,47 +171,160 @@ h1 {
     font-size: 5.5rem;
     margin-bottom: 20px;
 }
-
-.image-grid {
-    column-count: 3;
-    column-gap: 15px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+.gaming-section h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-align: left;
+    color: #9fb5bd;
 }
 
-.image-grid img {
-    width: 100%;
+/* Play Time Section */
+.play-time {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.game-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.game-thumbnails img {
+    width: 150px;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.image-grid img:hover {
+.game-thumbnails img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Style for the image thumbnail container */
+.thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Style for the images */
+.thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Style for the overlay */
+.playtime-overlay {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    font-size: 0.9rem; /* Font size */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    z-index: 1;
+    text-align: left; /* Align text to the left */
+    max-width: calc(100% - 20px); /* Ensure text doesn't overflow */
+}
+
+/* Hover effects */
+.thumbnail:hover img {
+    filter: blur(5px);
     transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px #9fb5bd;
 }
 
-/* Adjust grid for smaller screens */
-@media (max-width: 768px) {
-    .image-grid {
-        column-count: 2;
-    }
+.thumbnail:hover .playtime-overlay {
+    opacity: 1;
+    box-shadow: 0 4px 8px #9fb5bd;
 }
 
-@media (max-width: 480px) {
-    .image-grid {
-        column-count: 1;
-    }
+/* Games & Settings Section */
+.games-settings {
+    margin: 40px 0;
 }
 
-@media (max-width: 480px) {
-    .image-grid {
-        column-count: 1; /* Single column on small screens */
-    }
+.tekken-settings img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+}
 
+.config-file button {
+    background-color: #9fb5bd;
+    color: #0c0105;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.download-button {
+    background-color: #9fb5bd;
+    color: #0c0105;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.config-file .download-button:hover {
+    background-color: #090204;
+    transform: scale(1.05);
+    color: #9fb6bd;
+    box-shadow: 0 4px 8px #9fb5bd;
+}
+
+/* Game Clip Section */
+.game-clip .clip-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 285px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #9fb5bd;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+/* PC Specs Section */
+.pc-specs {
+    margin-bottom: 200px; /* Ensure proper spacing above the footer */
+}
+.pc-specs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pc-specs ul li {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.pc-specs ul li strong {
+    color: #7a4b5c;
+    
 }
 /* Background Images for Header and Footer */
 header {
